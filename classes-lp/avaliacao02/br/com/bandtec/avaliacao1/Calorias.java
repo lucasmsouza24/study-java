@@ -1,3 +1,4 @@
+package br.com.bandtec.avaliacao1;
 import java.util.Scanner;
 
 public class Calorias {
