@@ -28,5 +28,7 @@ public class Calculadora {
 //        divisão dos números  
         Double div = num1 / num2;
         System.out.println("Resultado da divisão: \n" + div);
+
+        sc.close();
     }
 }

@@ -25,5 +25,8 @@ public class CadastroUsuario {
                 + " antes de ser bloqueado";
         txt = String.format(txt, login, senha, limite_bloqueio);
         System.out.println(txt);
+
+        sc.close();
+        num_sc.close();
     }
 }

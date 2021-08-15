@@ -29,5 +29,7 @@ public class Quisito {
         String txt = "Você tem um total de %d filhos e vai receber R$%.2f de bolsa";
         txt = String.format(txt, total_filhos, valor_bolsa);
         System.out.println(txt);
+
+        sc.close();
     }
 }
