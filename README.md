@@ -2,10 +2,10 @@
 
 ## Sumário
 - [Estrutura básica](#estrutura-básica)
-- [Método Main](#metodo-main)
+- [Método Main](#método-main)
 - [Tipos](#tipos)
 - [Operadores](#operadores)
-- [Exibição (print)](#exibicao)
+- [Exibição (print)](#exibição)
 - [Input](#input)
 
 ## Estrutura básica
