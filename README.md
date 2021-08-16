@@ -1,7 +1,7 @@
 # Java Bandtec
 
 ## Sumário
-- [Estrutura básica](estrutura-basica)
+- [Estrutura básica](estrutura-básica)
 - [Método Main](metodo-main)
 - [Tipos](tipos)
 - [Operadores](operadores)
