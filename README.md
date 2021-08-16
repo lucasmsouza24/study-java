@@ -1,6 +1,14 @@
-# studyJava
+# Java Bandtec
 
-## Estrutura básica de um arquivo java
+## Sumário
+- [Estrutura básica](estrutura-basica)
+- [Método Main](metodo-main)
+- [Tipos](tipos)
+- [Operadores](operadores)
+- [Exibição (print)](exibicao)
+- [Input](input)
+
+## Estrutura básica
 
 Um arquivo java deve começar com a primeira letra maiúscula e ter a extensão **.java**.
 
@@ -37,7 +45,7 @@ class App {
 
 ## Tipos
 
-Os tipos primitivos do java são extremamente simples, nem mesmo aceitam o valor **null**. Portanto, as classes Wraper são mais utilizadas, pois as mesmas aceitam o valor **null** e possuem métodos úteis de conversão 
+Os tipos primitivos do java são extremamente simples, nem mesmo aceitam o valor **null**. Portanto, as classes Wraper são mais utilizadas, pois as mesmas aceitam o valor **null** e possuem métodos úteis de conversão.
 
 Tipos primitivos:
 - int
@@ -52,7 +60,7 @@ Classes Wrapper:
   ~~~
 - Double
   ~~~java
-  Double height = 1.68
+  Double height = 1.68;
   ~~~~ 
 - Boolean
   ~~~java
@@ -62,6 +70,43 @@ Classes Wrapper:
   ~~~java
   String nome = "Lucas";
   ~~~~ 
+  
+## Operadores
+
+Operadores aritméticos
+
+~~~java
+2 + 3;   // Adição
+2 - 3;   // Subtração
+2 * 3;   // Multiplicação
+2 / 3;   // Divisão
+2 % 3;   // Resto da divisão
+~~~
+
+Operadores Unários
+
+~~~java
+i++;    // Incremento
+i--;    // Decremento
+!true;  // Opedador de complemento lógico, inverte o valor de um boleano
+~~~
+
+Operadores Relacionais
+~~~java
+1 == 1;  // Igualdade
+1 != 1;  // Diferente
+1 > 1;   // Maior que
+1 >= 1;  // Maior ou igual à
+1 < 1;   // Menor que
+1 <= 1;  // Menor ou igual à
+~~~
+
+Operadores condicionais
+~~~java
+true && false;   // e (and)
+true || false;   // ou (or)
+true ? "do it" : "do that";  // Operador ternário
+~~~
 
 ## Exibição
 
@@ -79,3 +124,28 @@ System.out.println(txt);
 
 Output:
 > Olá Lucas, você tem 20 anos
+
+## Input
+
+Para realizar inputs, é necessária a importação da biblioteca Scanner:
+
+~~~java
+import java.util.Scanner;
+~~~
+
+> A importação deve acontecer fora da classe principal.
+
+O uso do Scanner é muito simples, basta instanciar a classe e usar seus métodos de acordo com o tipo do dado desejado.
+
+~~~java
+Scanner sc = new Scanner(System.in);    // Instanciando a classe Scanner
+
+String name = sc.nextLine();            // Capturando input do tipo String
+Integer age = sc.nextInt();             // Capturando input do tipo Integer
+Double age = sc.nextDouble();           // Capturando input do tipo Double
+
+sc.close();                             // Fechando instancia do Scanner
+~~~
+
+> Diferente da importação, o uso do Scanner deve ocorrer dentro do método main, ou seja, dentro da classe principal.
+
