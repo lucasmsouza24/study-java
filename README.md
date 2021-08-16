@@ -1,12 +1,12 @@
 # Java Bandtec
 
 ## Sumário
-- [Estrutura básica](estrutura-básica)
-- [Método Main](metodo-main)
-- [Tipos](tipos)
-- [Operadores](operadores)
-- [Exibição (print)](exibicao)
-- [Input](input)
+- [Estrutura básica](#estrutura-básica)
+- [Método Main](#metodo-main)
+- [Tipos](#tipos)
+- [Operadores](#operadores)
+- [Exibição (print)](#exibicao)
+- [Input](#input)
 
 ## Estrutura básica
 
