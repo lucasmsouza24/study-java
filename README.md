@@ -7,6 +7,7 @@
 - [Operadores](#operadores)
 - [Exibição (print)](#exibição)
 - [Input](#input)
+- [Estrutura Condicional](#estrutura-condicional)
 
 ## Estrutura básica
 
@@ -101,6 +102,17 @@ Operadores Relacionais
 1 <= 1;  // Menor ou igual à
 ~~~
 
+> Nota: ao comparar Strings, o operador **==** se mostra ineficiente. Por isso, é recomendado o uso do método **equals()** para relacionar **Strings**.
+
+~~~java
+String txt1 = "string 1";
+String txt2 = "string 2";
+String txt3 = "string 1";
+
+txt1.equals(txt2); // retorna false
+txt1.equals(txt3); // retorna true
+~~~
+
 Operadores condicionais
 ~~~java
 true && false;   // e (and)
@@ -148,4 +160,18 @@ sc.close();                             // Fechando instancia do Scanner
 ~~~
 
 > Diferente da importação, o uso do Scanner deve ocorrer dentro do método main, ou seja, dentro da classe principal.
+
+## Estrutura condicional
+
+A estrutura condicional tem a seguinte sintaxe
+
+~~~java
+    Boolean condition = true;
+    
+    if (condition) {
+        // if block
+    } else {
+        // else block
+    }
+~~~
 
