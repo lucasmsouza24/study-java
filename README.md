@@ -8,6 +8,7 @@
 - [Exibição (print)](#exibição)
 - [Input](#input)
 - [Estrutura Condicional](#estrutura-condicional)
+- [Estrutura de Repetição](#estrutura-de-repetição)
 
 ## Estrutura básica
 
@@ -191,6 +192,34 @@ A estrutura condicional tem a seguinte sintaxe
     } else {
         // else block;
     }
+~~~
+
+## Estrutura de Repetição
+
+Sintaxe **for**:
+
+~~~java
+    for (int i = 0; i <= 10; i++) {
+        // block code
+    }
+~~~
+
+Sintaxe **while**:
+
+~~~java
+    Boolean condition = false;
+    
+    while(condition) {
+        // block code
+    }
+~~~
+
+Sintaxe **do while**:
+
+~~~java
+    do {
+        // block code
+    } while (condition);
 ~~~
 
 ## Valores Randomicos
