@@ -137,6 +137,24 @@ System.out.println(txt);
 Output:
 > Olá Lucas, você tem 20 anos
 
+Para repetir uma string uma determinada quantidade de vezes, pode ser usado o método **repeat()**.
+
+~~~java
+    String txt = "=";
+    
+    txt.repeat(10);      // return: "=========="
+~~~
+
+Para arredondar um valor Double, existem métodos da clase Math:
+
+~~~java
+    Double pi = 3.14;
+    
+    Math.ceil(pi);      // return 4.0
+    Math.floor(pi)      // return 3.0
+    Math.round(pi);     // return 3.0
+~~~
+
 ## Input
 
 Para realizar inputs, é necessária a importação da biblioteca Scanner:
@@ -169,9 +187,39 @@ A estrutura condicional tem a seguinte sintaxe
     Boolean condition = true;
     
     if (condition) {
-        // if block
+        // if block;
     } else {
-        // else block
+        // else block;
     }
 ~~~
 
+## Valores Randomicos
+
+Gerando valor pseudoaleatório entre 0 e 1.
+
+~~~java
+    Math.random(); 
+~~~
+
+Classe random:
+
+~~~java
+    import java.util.Random;
+~~~
+
+Gerando números inteiros
+~~~java
+    Random rand = new Random();
+    rand.nextInt(10)      // retorna número inteiro entre 0 e 9
+~~~
+
+Para gerar valores entre um determinado intervalo, pode-se usar a método **ThreadLocalRandom()**
+
+~~~java
+    import  java.util.concurrent.ThreadLocalRandom;
+~~~
+
+Retornando valor inteiro entre 0 e 9:
+~~~java
+    ThreadLocalRandom.current().nextInt(0, 10); 
+~~~
