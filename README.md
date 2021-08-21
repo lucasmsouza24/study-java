@@ -9,6 +9,7 @@
 - [Input](#input)
 - [Estrutura Condicional](#estrutura-condicional)
 - [Estrutura de Repetição](#estrutura-de-repetição)
+- [Valores Randomicos](#valores-randomicos)
 
 ## Estrutura básica
 
@@ -220,6 +221,23 @@ Sintaxe **do while**:
     do {
         // block code
     } while (condition);
+~~~
+
+## Switch case
+
+~~~java
+    int day = 4;
+    
+    switch (day) {
+        case 6:
+            System.out.println("Today is Saturday");
+            break;
+        case 7:
+            System.out.println("Today is Sunday");
+            break;
+        default:
+            System.out.println("Looking forward to the Weekend");
+    }
 ~~~
 
 ## Valores Randomicos
