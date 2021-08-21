@@ -1,4 +1,4 @@
-package br.com.bandtec.aula03;
+package br.com.bandtec.aula02;
 
 public class Numericos {
     public static void main(String[] args) {

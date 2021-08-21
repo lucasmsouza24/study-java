@@ -1,4 +1,4 @@
-package br.com.bandtec.ex03;
+package br.com.bandtec.ex02;
 
 import java.util.Scanner;
 import  java.util.concurrent.ThreadLocalRandom;
@@ -14,15 +14,17 @@ public class Loteria {
         // Solicitação de input
         System.out.println("Digite  um número entre 0 e 10:");
         Integer input = sc.nextInt();
-        Integer sorteio = -1;
+        sc.close();
+        
+        Integer sorteio;
         Integer i = 1;
         
         // tentativas da máquina sortear o valor do input
-        while(sorteio != input) {
+        do {
             sorteio = ThreadLocalRandom.current().nextInt(0, 11);
             System.out.println("Valor sorteado: " + sorteio);
             i++;
-        }
+        } while(sorteio != input);
         
         System.out.println("=".repeat(40));
         

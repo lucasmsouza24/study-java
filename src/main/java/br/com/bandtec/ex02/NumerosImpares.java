@@ -1,4 +1,4 @@
-package br.com.bandtec.ex03;
+package br.com.bandtec.ex02;
 
 public class NumerosImpares {
     

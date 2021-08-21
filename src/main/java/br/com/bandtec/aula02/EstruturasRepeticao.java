@@ -1,4 +1,4 @@
-package br.com.bandtec.aula03;
+package br.com.bandtec.aula02;
 
 import java.util.Scanner;
 
@@ -33,5 +33,7 @@ public class EstruturasRepeticao {
             System.out.println("Digite novamente: ");
             nome = sc.nextLine();
         } while (!nome.equals("pedrolas"));
+
+        sc.close();
     }
 }

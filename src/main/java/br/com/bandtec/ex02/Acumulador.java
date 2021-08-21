@@ -1,4 +1,4 @@
-package br.com.bandtec.ex03;
+package br.com.bandtec.ex02;
 
 import java.util.Scanner;
 
@@ -9,17 +9,18 @@ public class Acumulador {
         // Instancia do scanner
         Scanner sc = new Scanner(System.in);
         
-        // primeiro input
-        System.out.println("Digite um inteiro (0 para parar)");
-        Integer input = sc.nextInt();
-        Integer soma = input;
+        // acumuladores
+        Integer input;
+        Integer soma = 0;
         
         // Iteração de inputs
-        while (input != 0) {
+        do {
             System.out.println("Digite um inteiro (0 para parar)");
             input = sc.nextInt();
             soma += input;
-        }
+        } while (input != 0);
+
+        sc.close();
         
         System.out.println("Soma: " + soma);
         

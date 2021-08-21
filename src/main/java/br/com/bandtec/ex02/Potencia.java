@@ -1,4 +1,4 @@
-package br.com.bandtec.ex03;
+package br.com.bandtec.ex02;
 
 import java.util.Scanner;
 
@@ -20,6 +20,7 @@ public class Potencia {
             inputExpoente = sc.nextInt();
         } while(inputBase < 0 && inputExpoente < 0);
         
+        sc.close();
         Integer pot = 1;
         
         // Calculando resultado

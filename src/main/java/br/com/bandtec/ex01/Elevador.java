@@ -1,4 +1,4 @@
-package br.com.bandtec.avaliacao1;
+package br.com.bandtec.ex01;
 import java.util.Scanner;
 
 public class Elevador {

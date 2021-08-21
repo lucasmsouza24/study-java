@@ -1,4 +1,4 @@
-package br.com.bandtec.ex03;
+package br.com.bandtec.ex02;
 
 import java.util.Scanner;
 
@@ -8,29 +8,33 @@ public class Autenticacao {
         
         // Instancia
         Scanner sc = new Scanner(System.in);
+
+        // variaveis de input
+        String inputNome;
+        String inputSenha;
         
-        Boolean auth = false;
-        
+        // Credenciais de autenticação
         String nome = "admin";
         String senha = "#Bandtec";
         
         // iteração de input
-        while (!auth) {
+        do {
             System.out.println("Nome: ");
-            String inputNome = sc.nextLine();
+            inputNome = sc.nextLine();
             
             System.out.println("Senha: ");
-            String inputSenha = sc.nextLine();
-            
-            if (inputNome.equals(nome) && inputSenha.equals(senha)) {
-                auth = true;
-                System.out.println("Login realizado com sucesso!");
-                System.out.println("Bem vindo, " + nome);
-            } else {
+            inputSenha = sc.nextLine();
+                
+            if (!inputNome.equals(nome) || !inputSenha.equals(senha)) {
                 System.out.println("Login e/ou usuário inválidos. Tente novamente");
             }
-            
-        }
+
+        } while (!inputNome.equals(nome) || !inputSenha.equals(senha));
+
+        System.out.println("Login realizado com sucesso!");
+        System.out.println("Bem vindo, " + nome);
+        
+        sc.close();
     }
     
 }

@@ -1,4 +1,4 @@
-package br.com.bandtec.aula03;
+package br.com.bandtec.aula02;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
