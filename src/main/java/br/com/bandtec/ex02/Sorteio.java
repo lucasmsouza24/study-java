@@ -7,10 +7,14 @@ public class Sorteio {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Integer inputInt;
         
         // input
-        System.out.println("Digite um número de 1 a 100:");
-        Integer inputInt = sc.nextInt();
+        do {
+            System.out.println("Digite um número de 1 a 100:");
+            inputInt = sc.nextInt();
+        } while(inputInt < 0 || inputInt > 100);
+
         sc.close();
 
         // Variáveis acumulativas
@@ -23,20 +27,20 @@ public class Sorteio {
         for (Integer i = 0; i <= 200; i++) {
             Integer sorteio = ThreadLocalRandom.current().nextInt(0, 200);
 
+            if (sorteio % 2 == 0) {
+                // Verificando se a posição do sorteio é par
+                par++;
+            } else {
+                // Verificando se a posição do sorteio é ímpar
+                impar++;
+            }
+
             // verificando sucesso do sorteio
             if (sorteio == inputInt) {
                 if (indexPrimeiroSorteio == null) {
-                    // Verificando se é o primeiro sorteio de sucess☻o
+                    // Verificando se é o primeiro sorteio de sucesso
                     indexPrimeiroSorteio = i;
                 } 
-
-                if (i % 2 == 0) {
-                    // Verificando se a posição do sorteio é par
-                    par++;
-                } else {
-                    // Verificando se a posição do sorteio é ímpar
-                    impar++;
-                }
 
                 System.out.println(i + ": " + sorteio);
             }
@@ -46,11 +50,11 @@ public class Sorteio {
         // Exibição de valores
         if (indexPrimeiroSorteio != null) {
             System.out.println("Primeiro acerto na " + indexPrimeiroSorteio + "º tentativa.");
-            System.out.println("Qtd de pares sorteados: " + par);
-            System.out.println("Qtd de impares sorteados: " + impar);
         } else {
             System.out.println("Não foi dessa vez. Sem acertos =(");
         }
+        System.out.println("\nQtd de pares sorteados: " + par);
+        System.out.println("\nQtd de impares sorteados: " + impar);
     }
     
 }
