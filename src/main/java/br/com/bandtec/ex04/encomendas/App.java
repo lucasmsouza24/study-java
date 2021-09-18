@@ -5,11 +5,11 @@ public class App {
     public static void main(String[] args) {
         
         Encomenda encomenda1 = new Encomenda(
-            8d,
-            17d, 
+            1d,
+            1d, 
             new Endereco("Rua A", "145A"), 
             new Endereco("Rua B", "200B"), 
-            4.3, 
+            55d, 
             100d
         );
 
