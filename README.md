@@ -270,3 +270,25 @@ Retornando valor inteiro entre 0 e 9:
 ~~~java
     ThreadLocalRandom.current().nextInt(0, 10); 
 ~~~
+
+## Fatorial
+~~~java
+    // input
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Digite um número: ");
+    Integer number = sc.nextInt();
+    Integer factory = number;
+    // sc.close();
+    System.out.println("-".repeat(20));
+
+    // calculo
+    for (Integer i = number - 1; i >= 1; i--) {
+        factory *= i;
+    }
+
+    // exibição
+    String txt = "%d! = %d";
+    txt = String.format(txt, number, factory);
+    System.out.println(txt);
+~~~
