@@ -10,6 +10,8 @@
 - [Estrutura Condicional](#estrutura-condicional)
 - [Estrutura de Repetição](#estrutura-de-repetição)
 - [Valores Randomicos](#valores-randomicos)
+- [Orientação a Objetos](#orientação-a-objetos)
+    - [Classes e Objetos](#classes-e-objetos)
 
 ## Estrutura básica
 
@@ -291,4 +293,61 @@ Retornando valor inteiro entre 0 e 9:
     String txt = "%d! = %d";
     txt = String.format(txt, number, factory);
     System.out.println(txt);
+~~~
+
+## Orientação a Objetos
+
+### Classes e Objetos
+Uma classe é um elemento que define quais atributos e métodos um objeto deve conter.
+
+Exemplo de classe:
+
+~~~java
+    class Person {
+        // attributes
+        String name = "John";
+        Integer age = 21;
+        
+        // methods
+        void Greetings() {
+            System.out.println("Hi, my name is " + this.name + " and I'm " + this.age);
+        }
+    }
+~~~
+
+Já um objeto (ou instância) é a implementação de uma classe, contendo seus atributos e métodos. 
+
+Em java, um objeto pode ser instanciado através do operador **new** e armazenado em uma variável, seguindo a notação:
+
+> TipoClasse varName = new TipoClasse();
+
+Exemplo de objeto:
+
+~~~java
+    // instancing a Person object
+    Person p1 = new Person();
+~~~
+
+Depois de instânciado, os atribudos/métodos podem ser acessados ou modificados através do operador de acesso. 
+
+> object.attribute;
+> object.method();
+
+~~~java
+    System.out.println(p1.name);    // prints: "John"
+    System.out.println(p1.age);     // prints: 21
+    p1.greetings();                 // prints: "Hi, my name is John and I'm 21"
+~~~
+
+Vários objetos podem ser criados a partir de uma mesma classe e podem conter estados (valores) diferentes de suas instâncias "irmãs". 
+
+~~~java 
+    Person p1 = new Person();
+    Person p2 = new Person();
+    
+    // modifying p2.name 
+    p2.name = "Yoko";
+    
+    System.out.println(p1.name);    // prints: "John"
+    System.out.println(p2.name);    // prints: "Yoko"
 ~~~
