@@ -70,16 +70,16 @@ public class Encomenda {
     }
 
     public String emitirEtiqueta() {
-        System.out.println("****** ETIQUETA PARA ENVIO ******");
+        System.out.println("\n****** ETIQUETA PARA ENVIO ******");
         String str = "Endereço do remetente: %s\n" +
         "Endereço do destinatário: %s\n" +
         "Altura da encomenda: %.2f cm\n" +
         "Largura da encomenda: %.2f cm\n" +
         "----------------------\n" + 
-        "Valor da encomenda: %d\n" +
-        "Valor do frete: %d\n" +
+        "Valor da encomenda: R$ %.2f\n" +
+        "Valor do frete: R$ %.2f\n" +
         "----------------------\n" +
-        "Valor total: R$ %.2f";
+        "Valor total: R$ %.2f\n";
         str = String.format(
             str, 
             this.enderecoRemetente,
