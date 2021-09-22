@@ -15,6 +15,17 @@ public class Livro {
     }
 
     // getters
+    public String getTitulo() {
+        return this.titulo;
+    }
+
+    public String getNomeAutor() {
+        return this.nomeAutor;
+    }
+
+    public Double getValor() {
+        return this.valor;
+    }
 
     // to string override
     @Override
