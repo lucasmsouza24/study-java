@@ -6,23 +6,37 @@ public class DB {
     
     private Account[] accounts = new Account[0];
 
+    // append account to array
     public void appendAcc(Account acc) {
         this.accounts = Arrays.copyOf(this.accounts, this.accounts.length + 1);
         this.accounts[this.accounts.length - 1] = acc;
     }
 
-    public Boolean accExists(String user, String password) {
+    // get all account infos
+    public String[] getAccs() { 
 
-        Boolean accExists = false;
+        // get String array with information about accounts
+        String[] accs = new String[this.accounts.length];
 
-        // verifying if acc exists
+        // append all info for each account
+        for (int i = 0; i < this.accounts.length; i++) {
+            accs[i] = this.accounts[i].getInfo();
+        }
+
+        return accs;
+    }
+
+    public Boolean userExists(String user, String password) {
+
+        Boolean userExists = false;
+
         for (Account acc : this.accounts) {
-            if (user.equals(acc.getUser()) && acc.isPassword(password)) {
-                accExists = true;
-                break;
+            if (acc.isAuth(user, password)) {
+                userExists = true;
             }
         }
 
-        return accExists;
+        return userExists;
     }
+
 }

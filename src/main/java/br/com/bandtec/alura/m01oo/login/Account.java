@@ -16,8 +16,8 @@ public class Account {
     }
 
     // return true if str == password
-    public Boolean isPassword(String str) {
-        return str.equals(this.password);
+    public Boolean isAuth(String user, String password) {
+        return user.equals(this.user) && password.equals(this.password);
     }
 
     // get account informations without break security
