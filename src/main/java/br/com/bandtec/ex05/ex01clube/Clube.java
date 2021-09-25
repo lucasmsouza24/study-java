@@ -17,21 +17,25 @@ public class Clube {
     private Integer empates;
     private Integer derrotas;
     private Integer pontos;
+    private String ultimoJogo;
 
     // comportamentos
 
     public void registrarVitoria() {
         this.vitorias++;
         this.pontos += 3;
+        registrarUltimoJogo("venceu");
     }
 
     public void registrarDerrota() {
         this.derrotas++;
+        registrarUltimoJogo("perdeu");
     }
 
     public void registrarEmpate() {
         this.empates++;
         this.pontos++;
+        registrarUltimoJogo("empatou");
     }
 
     // nome
@@ -60,6 +64,16 @@ public class Clube {
     // pontos
     public Integer getPontos() {
         return this.pontos;
+    }
+
+    // ultimo jogo
+    public String getUltimoJogo() {
+        return this.ultimoJogo;
+    }
+
+    private void registrarUltimoJogo(String situacao) {
+        String str = "%s %s nessa rodada.";
+        this.ultimoJogo = String.format(str, this.nome, situacao);
     }
 
     // override to string
