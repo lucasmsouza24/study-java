@@ -1,4 +1,4 @@
-package br.com.bandtec.ex05.ex06colaborador;
+package br.com.bandtec.ex05.ex05colaborador;
 
 public class RecursosHumanos {
     
