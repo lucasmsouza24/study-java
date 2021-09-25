@@ -12,6 +12,7 @@
 - [Valores Randomicos](#valores-randomicos)
 - [Orientação a Objetos](#orientação-a-objetos)
     - [Classes e Objetos](#classes-e-objetos)
+    - [Encapsulamento](#encapsulamento)
 
 ## Estrutura básica
 
@@ -350,4 +351,131 @@ Vários objetos podem ser criados a partir de uma mesma classe e podem conter es
     
     System.out.println(p1.name);    // prints: "John"
     System.out.println(p2.name);    // prints: "Yoko"
+~~~
+
+### Encapsulamento
+
+Até agora, todos os atributos e métodos poderiam ser acessados por um contexto externo livremente, o que pode comprometer a integridade de um objeto.
+
+Aplicando algumas técnicas de encapsulamento, podemos criar regras para a construção e uso do objeto, protejendo-o de um uso indevido.
+
+#### Modificadores de acesso
+
+Os modificadores de acesso são palavras reservadas que nos permitem "esconder" atributos e métodos em diferentes níveis de "visibilidade".
+
+até agora (por baixo dos panos) utilizamos o modificador **default**, que simplesmente deixa o atributo/método visível em qualquer classe do pacote atual.
+
+~~~java
+default String name;    
+~~~
+
+De forma intuitiva, o modificador **public** torna a visibilidade atributo/método pública para qualquer outra classe de dentro ou fora do pacote atual.
+
+~~~java
+public String name;
+~~~
+
+Já o modificador **private** priva o método/atributo de qualquer classe externa, tornando impossível seu acesso direto.
+
+~~~java
+private String name;
+~~~
+
+Muito parecido com o **private**, o modificador **protected** também priva seus atributos e métodos de classes externas, porém ele mantem o acesso para classes filhas.
+
+~~~java
+protected String name;
+~~~
+
+#### Getters e Setters
+
+Uma vez que o acesso direto à atributos seja restringido. Nasce a necessidade de criar métodos que manipulem ou acessem esses atributos de forma indireta.
+
+O padrão **Getter** é um método que retorna o valor de algum atributo.
+
+~~~java
+public String getName() {
+    return this.name;
+}
+~~~
+
+> **this** é uma palavra reservada usada para refererenciar a instancia de um objeto
+
+Já o setter é um padrão que visa atribuir valor à algum atributo protegido.
+
+~~~java
+public void setName(String value) {
+    this.name = value;
+}
+~~~
+
+> O **setter** é muito útil para aplicar regras de comportamentos de um objeto, como no exemplo a seguir:
+
+~~~java
+public void setAge(Integer value) {
+    if (value > 0) {
+        this.age = value;
+    }
+}
+~~~
+
+#### Construtor
+
+Os construtores são utilizados quando queremos que um bloco de código execute durante a inicialização de um objeto e é utilizado frequentemente para forçar a atribuição de valores.
+
+Dessa forma, valores podem ser passados durante a criação do objeto, facilitando a atribuiçao de alguns valores.
+
+~~~java
+public class Person {
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    private String name;
+
+    public String getName() {
+        return this.name;
+    }
+
+}
+~~~
+
+~~~java
+Person p = new Person("Abel");
+p.getName() // returns "Abel"
+
+~~~
+
+#### Resumo
+
+com o que vimos até agora, a estrutura padrão de uma classe fica da seguinte forma.
+
+~~~java
+public class Person {
+
+    // constructor
+    public Person(String name) {
+        setName(name); // or this.name = name;
+    }
+
+    // attribute
+    private String name;
+
+    // getters
+    public void getName() {
+        return this.name;
+    }
+
+    // setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // methods
+    public void greetings() {
+        System.out.println("Hello, Im " + this.name);
+    }
+
+}
 ~~~
