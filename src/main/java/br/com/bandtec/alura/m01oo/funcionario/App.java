@@ -23,6 +23,16 @@ class Funcionario {
 
 class Gerente extends Funcionario {
 
+    @Override
+    public double getBonus() {
+        return this.salario * 0.3;
+    }
+
+}
+
+class Desenvolvedor extends Funcionario {
+    
+    @Override
     public double getBonus() {
         return this.salario * 0.3;
     }
