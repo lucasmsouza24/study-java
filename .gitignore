@@ -1,6 +1,12 @@
 .vscode
 *.class
 /target/
+./target/**
+.classpath
+.project
+.settings/
+target/
+target
 
 # Compiled class file
 *.class
