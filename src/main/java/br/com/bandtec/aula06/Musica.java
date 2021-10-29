@@ -18,8 +18,9 @@ public class Musica {
         this.nome = nome;
     }
 
-    public Double getDuracao() {
-        return duracao;
+    public String getDuracao() {
+        String dur = String.format("%.2f", this.duracao).replaceAll(",", ":");
+        return dur;
     }
 
     public void setDuracao(Double duracao) {
