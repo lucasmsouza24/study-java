@@ -15,6 +15,8 @@
     - [Encapsulamento](#encapsulamento)
 - [Coleções](#coleções)
     - [ArrayList](#arraylist)
+- [JDBC](#jdbc)
+
 
 ## Estrutura básica
 
@@ -531,4 +533,91 @@ System.out.println(list);           // [10, 40]
 ~~~java
 list.contains(10);  // true
 list.contains(15);  // false
+~~~
+
+### JDBC
+
+#### Dependências
+
+incluindo dependências ao pom.xml (maven)
+
+~~~xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-dbcp2</artifactId>
+    <version>2.9.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>5.3.10</version>
+</dependency>
+
+<!-- conector mysql -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.26</version>
+</dependency>
+~~~
+
+#### Mapeando tabelas
+
+Crie uma classe para cada tabela existente no banco. A classe deve conter **um construtor vazio** e atributos equivalentes às colunas da tabela em questão (nome e tipo). Também é necessário que cada atributo tenha seus **getters** e **setters**.
+
+~~~java
+public class Filme {
+    // atributos equivalentes às colunas da tabela
+    private Integer idFilme;
+    private String titulo;
+    private String genero;
+    private String diretor;
+
+    // construtor vazio
+    public Filme() {
+        
+    }
+
+    // getters and setters ...
+}
+~~~
+
+#### Connection
+
+Configurando conexão do banco 
+
+~~~java
+// connection
+BasicDataSource db = new BasicDataSource();         
+db.setDriverClassName("com.mysql.cj.jdbc.Driver");  // driver do banco
+db.setUrl("jdbc:mysql://localhost:3306/filme");     // host:porta/nome__banco
+db.setUsername("root");                             // usuario do banco
+db.setPassword("urubu100");                         // senha do banco  
+
+// template
+JdbcTemplate template = new JdbcTemplate(db);       // necessário para realizar query
+
+// é recomendado fechar conexão ao terminar as consultas
+db.close();
+~~~
+
+#### Querying
+
+##### SELECT
+Para fazer uma consulta, basta chamar o método **query()** do *template*. Passando a query (SQL) e o mapeador (table -> Class) como mostrado a seguir.
+
+~~~java 
+String sql = "SELECT * FROM filme";
+BeanPropertyRowMapper<Filme> bean = new BeanPropertyRowMapper<>(Filme.class);
+List<Filme> filmes = template.query(sql, bean);
+~~~
+
+##### UPDATE, DELETE and CREATE
+
+Para realizar uma consulta que não retorna linhas, basta utilizar o método **execute()** passando uma string de consulta.
+
+~~~java
+String sql2 = "UPDATE filme SET titulo = 'Shrek 100' WHERE id_filme = 5";
+template.execute(sql2);
 ~~~
