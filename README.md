@@ -13,6 +13,8 @@
 - [Orientação a Objetos](#orientação-a-objetos)
     - [Classes e Objetos](#classes-e-objetos)
     - [Encapsulamento](#encapsulamento)
+- [Iteráveis](#iteráveis)
+    - [ArrayList](#arraylist)
 
 ## Estrutura básica
 
@@ -478,4 +480,55 @@ public class Person {
     }
 
 }
+~~~
+
+## Iteráveis
+
+### ArrayList
+
+Um objeto da classe **ArrayList** é muito parecido com um vetor. Porém, contém alguns métodos auxiliares, além de não ter um tamanho imutável.
+
+~~~java
+import java.util.ArrayList;
+import java.util.List;
+~~~
+
+Instanciando ArrayList (lembre-se de especificar o tipo de objeto que a lista pode receber, nesse caso será Integer)
+
+~~~java
+List<Integer> list = new ArrayList<>();
+~~~
+
+#### Métodos úteis
+**add(object)** -> adiciona um item ao ArrayList. O item deve ser do tipo declarado na instância do **ArrayList**.
+
+~~~java
+list.add(10);
+list.add(20);
+list.add(30);
+list.add(40);
+
+System.out.println(list);   // [10, 20, 30, 40]
+~~~
+
+**get(int index)** -> retorna item da lista baseado no index.
+
+~~~java
+list.get(2);    // 30
+~~~
+
+**remove(int index)**; **remove(object)** -> remove item através do index passado ou pelo próprio objeto.
+
+~~~java
+list.remove(1);                     // remove item de index 1 (20)
+list.remove(Integer.valueOf(30));   // remove item de valor 30
+
+System.out.println(list);           // [10, 40]
+~~~
+
+**contains(object)** -> retorna true se o objeto existir dentro da lista.
+
+~~~java
+list.contains(10);  // true
+list.contains(15);  // false
 ~~~

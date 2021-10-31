@@ -2,6 +2,10 @@ package br.com.bandtec.ex05.ex05colaborador;
 
 public class Colaborador {
     
+    private String nome;
+    private String cargo;
+    private Double salario;
+
     public Colaborador(String nome, String cargo, Double salario) {
         this.nome = nome;
         this.cargo = cargo;
@@ -11,10 +15,6 @@ public class Colaborador {
     public Colaborador(String nome, String cargo, Integer salario) {
         this(nome, cargo, Double.valueOf(salario));
     }
-
-    private String nome;
-    private String cargo;
-    private Double salario;
 
     /**
      * @return nome do Colaborador

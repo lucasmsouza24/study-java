@@ -2,13 +2,13 @@ package br.com.bandtec.ex05.ex05colaborador;
 
 public class RecursosHumanos {
     
+    private Integer totalPromovidos;
+    private Integer totalSalariosReajustados;
+
     public RecursosHumanos() {
         this.totalPromovidos = 0;
         this.totalSalariosReajustados = 0;  
     }
-
-    private Integer totalPromovidos;
-    private Integer totalSalariosReajustados;
 
     /**
      * Atribui @param novoSalario à colaborador @param c
@@ -18,6 +18,7 @@ public class RecursosHumanos {
         c.setSalario(novoSalario);
         this.totalSalariosReajustados++;
     }
+    
     public void reajustarSalario(Colaborador c, Integer novoSalario) {
         reajustarSalario(c, Double.valueOf(novoSalario));
     }
@@ -42,7 +43,6 @@ public class RecursosHumanos {
     public void promoverColaborador(Colaborador c, String novoCargo, Integer novoSalario) {
         promoverColaborador(c, novoCargo, Double.valueOf(novoSalario));
     }
-
 
     /**
      * @return total de promovidos

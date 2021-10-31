@@ -16,7 +16,7 @@ public class App1 {
         System.out.println(nums);
 
         // for
-        for(int i = 0; i <= nums.size(); i++) {
+        for(int i = 0; i < nums.size(); i++) {
             System.out.println(nums.get(i));
         }
 

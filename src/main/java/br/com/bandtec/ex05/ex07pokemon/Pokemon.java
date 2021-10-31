@@ -34,7 +34,7 @@ public class Pokemon {
         this.tipo = tipo;
     }
 
-    // forca
+    // força
     public Double getForca() {
         return forca;
     }
