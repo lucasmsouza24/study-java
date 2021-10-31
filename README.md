@@ -13,7 +13,7 @@
 - [Orientação a Objetos](#orientação-a-objetos)
     - [Classes e Objetos](#classes-e-objetos)
     - [Encapsulamento](#encapsulamento)
-- [Iteráveis](#iteráveis)
+- [Coleções](#coleções)
     - [ArrayList](#arraylist)
 
 ## Estrutura básica
@@ -482,7 +482,7 @@ public class Person {
 }
 ~~~
 
-## Iteráveis
+## Coleções
 
 ### ArrayList
 
