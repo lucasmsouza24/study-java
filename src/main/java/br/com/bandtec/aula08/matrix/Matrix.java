@@ -1,4 +1,4 @@
-package br.com.bandtec.aula08;
+package br.com.bandtec.aula08.matrix;
 
 import java.util.ArrayList;
 import java.util.List;
