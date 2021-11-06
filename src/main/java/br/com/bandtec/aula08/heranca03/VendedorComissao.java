@@ -2,10 +2,10 @@ package br.com.bandtec.aula08.heranca03;
 
 public class VendedorComissao {
     // attributes
-    private Integer codigo;
-    private String nome;
-    private Double vendas;
-    private Double taxa;
+    protected Integer codigo;
+    protected String nome;
+    protected Double vendas;
+    protected Double taxa;
 
     // constructor
     public VendedorComissao(Integer codigo, String nome, Double vendas, Double taxa) {
@@ -46,5 +46,9 @@ public class VendedorComissao {
     public void setTaxa(Double taxa) {
         this.taxa = taxa;
     }
-    
+
+    @Override
+    public String toString() {
+        return "VendedorComissao [codigo=" + codigo + ", nome=" + nome + ", taxa=" + taxa + ", vendas=" + vendas + ", salarioTotal="+ calcularSalario() + "]";
+    }
 }
