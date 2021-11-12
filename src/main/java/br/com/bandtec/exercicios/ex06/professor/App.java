@@ -5,7 +5,7 @@ public class App {
         Professor p1 = new Professor(1, "lucas", 10, 20d);
         Coordenador c1 = new Coordenador(2, "Diego", 10, 20d, "Java", 3, 30d);
 
-        Faculdade f1 = new Faculdade("Bandtec", 1);
+        Faculdade f1 = new Faculdade("Bandtec", 5);
 
         f1.contratarProfessor(p1);
         f1.contratarProfessor(c1);

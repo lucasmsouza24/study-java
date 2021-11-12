@@ -47,9 +47,18 @@ public class Faculdade {
 
     @Override
     public String toString() {
+
+        StringBuilder str = new StringBuilder();
+        str.append("\nFaculdade: %s");
+        str.append("\nvagas totais: %d");
+        str.append("\nvagas restantes: %d");
+        str.append("\nProfessores: %d");
+        str.append("\nCoordenadores: %d");
+
         return String.format(
-            "\nFaculdade: %s\nvagas: %d\nProfessores: %d\nCoordenadores: %d",
+            String.valueOf(str),
             this.nome, 
+            this.vagas + this.professores.size(),
             this.vagas, 
             this.professores.size(),
             qtdCoord()
