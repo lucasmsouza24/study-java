@@ -17,22 +17,26 @@ public abstract class Aluno {
 
     @Override
     public String toString() {
-        return "Aluno [nome=" + nome + ", ra=" + ra + ", media=" + this.calculaMedia()+ "]";
+        StringBuilder str = new StringBuilder("\nAluno\n");
+
+        str.append("-".repeat(30));
+        str.append(String.format("\nnome  : %s", this.nome));
+        str.append(String.format("\nra    : %d", this.ra));
+        str.append(String.format("\nmedia : %s", this.calculaMedia()));
+
+        return String.valueOf(str);
     }
 
     // getters and setters
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     public Integer getRa() {
         return ra;
     }
-
     public void setRa(Integer ra) {
         this.ra = ra;
     }

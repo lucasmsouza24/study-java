@@ -23,26 +23,28 @@ public class AlunoGraduacao extends Aluno {
         return mediaArredondada;
     }
 
-    // getters and setters
+    @Override
+    public String toString() {   
+        String superStr = super.toString().replaceAll("Aluno", "AlunoGraduacao"); 
+        StringBuilder str = new StringBuilder(superStr);
 
+        str.append(String.format("\nnota 1: %.2f", nota1));
+        str.append(String.format("\nnota 2: %.2f", nota2));
+
+        return String.valueOf(str);
+    }
+
+    // getters and setters
     public Double getNota1() {
         return nota1;
     }
-
     public void setNota1(Double nota1) {
         this.nota1 = nota1;
     }
-
     public Double getNota2() {
         return nota2;
     }
-
     public void setNota2(Double nota2) {
         this.nota2 = nota2;
-    }
-
-    @Override
-    public String toString() {    
-        return super.toString().replaceAll("Aluno", "AlunoGraduacao");
     }
 }
