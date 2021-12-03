@@ -9,7 +9,7 @@ public class Matrix {
 
         // NÃO FAÇAM ISSO EM CASA!
 
-        List<List> list = new ArrayList<>();
+        List<List<Integer>> list = new ArrayList<>();
 
         for(int line = 1; line <= 3; line++) {
             // creating row
@@ -27,7 +27,7 @@ public class Matrix {
         // print
         System.out.println(list + "\n");
 
-        for (List row : list) {
+        for (List<Integer> row : list) {
             System.out.println(row);
         }
     }
