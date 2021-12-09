@@ -1,4 +1,4 @@
-# Java Bandtec
+# Java SPTECH SCHOOL (Bandtec)
 
 ## Sumário
 - [Estrutura básica](#estrutura-básica)
