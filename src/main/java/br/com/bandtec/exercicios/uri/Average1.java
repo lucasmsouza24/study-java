@@ -10,10 +10,7 @@ public class Average1 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("A: ");
         double A = sc.nextDouble();
-
-        System.out.println("B: ");
         double B = sc.nextDouble();
 
         double average = ((A * 3.5) + (B * 7.5)) / (3.5 + 7.5);
