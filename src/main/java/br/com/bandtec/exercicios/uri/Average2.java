@@ -1,6 +1,5 @@
 package br.com.bandtec.exercicios.uri;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Average2 {
@@ -19,7 +18,9 @@ public class Average2 {
         double average = ((A * 2) + (B * 3) + (C * 5)) / (2 + 3 + 5);
 
         // displaying
-        System.out.println("MEDIA = " + average);
+        String str = "MEDIA = %.1f";
+        str = String.format(str, average);
+        System.out.println(str);
 
     }
 }
